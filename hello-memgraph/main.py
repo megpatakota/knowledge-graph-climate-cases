@@ -136,8 +136,8 @@ def main():
                 clear_database(session)
                 create_nodes(session, chunk_nodes)
                 create_entities(session, entity_nodes)
-                create_relationships(session, entity_nodes)
-                verify_data(session)
+                # # create_relationships(session, entity_nodes)
+                # verify_data(session)
                 
                 logging.info("Graph creation and verification completed successfully.")
     except Exception as e:

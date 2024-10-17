@@ -2135,6 +2135,25 @@ docs = ["myst-parser", "pydata-sphinx-theme", "sphinx", "sphinxcontrib-github-al
 test = ["pep440", "pre-commit", "pytest", "testpath"]
 
 [[package]]
+name = "neo4j"
+version = "5.25.0"
+description = "Neo4j Bolt driver for Python"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "neo4j-5.25.0-py3-none-any.whl", hash = "sha256:df310eee9a4f9749fb32bb9f1aa68711ac417b7eba3e42faefd6848038345ffa"},
+    {file = "neo4j-5.25.0.tar.gz", hash = "sha256:7c82001c45319092cc0b5df4c92894553b7ab97bd4f59655156fa9acab83aec9"},
+]
+
+[package.dependencies]
+pytz = "*"
+
+[package.extras]
+numpy = ["numpy (>=1.7.0,<2.0.0)"]
+pandas = ["numpy (>=1.7.0,<2.0.0)", "pandas (>=1.1.0,<3.0.0)"]
+pyarrow = ["pyarrow (>=1.0.0)"]
+
+[[package]]
 name = "nest-asyncio"
 version = "1.6.0"
 description = "Patch asyncio to allow nested event loops"
@@ -4781,4 +4800,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "0e13aaa3701f1e94c80be2ba5349e847ba19eb29368379bf42c1972bf96da326"
+content-hash = "c5a7fcc7f035c6d0b747ebd084d46a9ea7c41a54b20e393f09800c4a8f0ca1e6"
