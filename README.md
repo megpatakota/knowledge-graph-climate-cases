@@ -2,7 +2,7 @@
 
 [![Personal Project](https://img.shields.io/badge/Project-Personal-green)](https://meg-patakota.github.io)
 [![by Meg Patakota](https://img.shields.io/badge/by-Meg%20Patakota-blue)](https://meg-patakota.github.io)
-[![Project Status](https://img.shields.io/badge/Status-In%20Development-orange)](https://github.com/yourusername/knowledge-graph-)
+[![Project Status](https://img.shields.io/badge/Status-In%20Development-orange)](https://github.com/yourusername/knowledge-graph-climate-litigation)
 
 > ⚠️ **Disclaimer:** This project is currently under active development. Features, code, and documentation are subject to change as it evolves.
 
@@ -40,6 +40,8 @@ RETURN c, e, r;
 ```
 
 ## Graph Architecture
+### About Data 
+[Sabin Center for Climate Change Law](https://climatecasechart.com)
 ![Graph Architecture](knowledge_graph_architecture.png)
 
 ## Contributing
