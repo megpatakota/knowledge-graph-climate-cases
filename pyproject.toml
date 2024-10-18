@@ -18,7 +18,6 @@ jupyter = "^1.1.1"
 ipywidgets = "^8.1.5"
 neo4j = "^5.25.0"
 
-
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
 
