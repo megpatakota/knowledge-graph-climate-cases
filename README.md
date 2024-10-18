@@ -5,7 +5,10 @@
 ## Run Memgraph Lab image
 More information here https://memgraph.com/docs/getting-started/install-memgraph/docker#run-memgraph-lab-image
 -  First run this
-    - docker run -d -p 3000:3000 -e QUICK_CONNECT_MG_HOST=host.docker.internal --name lab memgraph/lab
+```
+docker run -d -p 3000:3000 -e QUICK_CONNECT_MG_HOST=host.docker.internal --name lab memgraph/lab
+```
+http://localhost:3000/login
 - Now, run this:    
     - docker run -p 7687:7687 -p 7444:7444 memgraph/memgraph-mage
 
@@ -18,3 +21,7 @@ MATCH (n) RETURN n;
 # QUERY to see nodes, entities and edges
 MATCH (c:CHUNK)-[r:HAS_ENTITY]->(e:ENTITY)
 RETURN c, e, r LIMIT 10;
+
+# clear all poetry cache
+poetry cache clear --all pypi
+poetry lock --no-update

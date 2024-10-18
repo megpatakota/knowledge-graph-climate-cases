@@ -78,10 +78,11 @@ def create_entities(session: Session, entity_nodes: List[EntityNode]) -> None:
             CREATE (e:ENTITY {
                 id: $id,
                 content: $content,
-                category: $category
+                category: $category,
+                chunk_id: $chunk_id
             })
             """
-            session.run(cypher_query, id=entity['id'], content=entity['text'], category=entity['label'])
+            session.run(cypher_query, id=entity['id'], content=entity['text'], category=entity['label'], chunk_id=entity['chunk_id'])
         logging.info("ENTITY nodes created successfully.")
     except Exception as e:
         logging.error(f"Error creating ENTITY nodes: {e}")
@@ -101,11 +102,13 @@ def create_relationships(session: Session, entity_nodes: List[EntityNode]) -> No
             MATCH (e:ENTITY {id: $entity_id})
             MERGE (c)-[:HAS_ENTITY]->(e)
             """
+            # Execute the query to create a relationship between CHUNK and ENTITY
             session.run(cypher_query, chunk_id=entity['chunk_id'], entity_id=entity['id'])
         logging.info("Relationships created successfully.")
     except Exception as e:
         logging.error(f"Error creating relationships: {e}")
         raise
+
 
 def verify_data(session: Session) -> None:
     """
@@ -136,7 +139,7 @@ def main():
                 clear_database(session)
                 create_nodes(session, chunk_nodes)
                 create_entities(session, entity_nodes)
-                # # create_relationships(session, entity_nodes)
+                create_relationships(session, entity_nodes)
                 # verify_data(session)
                 
                 logging.info("Graph creation and verification completed successfully.")
