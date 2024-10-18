@@ -2,14 +2,15 @@
 
 [![Personal Project](https://img.shields.io/badge/Project-Personal-green)](https://meg-patakota.github.io)
 [![by Meg Patakota](https://img.shields.io/badge/by-Meg%20Patakota-blue)](https://meg-patakota.github.io)
-[![Project Status](https://img.shields.io/badge/Status-In%20Development-orange)](https://github.com/yourusername/knowledge-graph-climate-litigation)
+[![Project Status](https://img.shields.io/badge/Status-In%20Development-orange)](https://github.com/yourusername/knowledge-graph-climate-litigation-cases)
 
 > ⚠️ **Disclaimer:** This project is currently under active development. Features, code, and documentation are subject to change as it evolves.
 
 ## Table of Contents
 - [Installation](#installation)
-    - [Graph setup](#graph-setup)
 - [Graph Architecture](#graph-architecture)
+    - [Graph setup](#graph-setup)
+- [About the Data](#about-data)
 - [Contributing](#contributing)
 
 ## Installation
@@ -17,11 +18,13 @@
 Clone the repository and install dependencies using **Poetry**:
 
 ```bash
-git clone https://github.com/yourusername/knowledge-graph-climate-litigation.git
-cd knowledge-graph-climate-litigation
+git clone https://github.com/yourusername/knowledge-graph-climate-litigation-cases.git
+cd knowledge-graph-climate-litigation-cases
 poetry install
 ```
 
+## Graph Architecture
+![Graph Architecture](knowledge_graph_architecture.png)
 ### Graph setup
 The current setup works by running docker for memgraph and running memgraph lab image.
 More information on [memgraph site](https://memgraph.com/docs/getting-started/install-memgraph/docker#run-memgraph-lab-image)
@@ -39,10 +42,8 @@ MATCH (c:CHUNK)-[r:HAS_ENTITY]->(e:ENTITY)
 RETURN c, e, r;
 ```
 
-## Graph Architecture
-### About Data 
+## About the Data 
 [Sabin Center for Climate Change Law](https://climatecasechart.com)
-![Graph Architecture](knowledge_graph_architecture.png)
 
 ## Contributing
 
