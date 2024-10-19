@@ -41,7 +41,7 @@ Start the [local host](http://localhost:3000/login)
 MATCH (c:CHUNK)-[r:HAS_ENTITY]->(e:ENTITY)
 RETURN c, e, r;
 ```
-![Query output graph](./images/graph.png.png)
+![Query output graph](./images/graph.png)
 
 ## About the Data 
 [Sabin Center for Climate Change Law](https://climatecasechart.com)
