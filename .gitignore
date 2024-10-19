@@ -77,8 +77,6 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-# ignore all ipynb notebooks
-*.ipynb
 
 # IPython
 profile_default/
