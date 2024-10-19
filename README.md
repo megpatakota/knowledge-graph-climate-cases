@@ -24,7 +24,7 @@ poetry install
 ```
 
 ## Graph Architecture
-![Graph Architecture](knowledge_graph_architecture.png)
+![Graph Architecture](./images/knowledge_graph_architecture.png)
 ### Graph setup
 The current setup works by running docker for memgraph and running memgraph lab image.
 More information on [memgraph site](https://memgraph.com/docs/getting-started/install-memgraph/docker#run-memgraph-lab-image)
@@ -41,6 +41,7 @@ Start the [local host](http://localhost:3000/login)
 MATCH (c:CHUNK)-[r:HAS_ENTITY]->(e:ENTITY)
 RETURN c, e, r;
 ```
+![Query output graph](./images/graph.png.png)
 
 ## About the Data 
 [Sabin Center for Climate Change Law](https://climatecasechart.com)
