@@ -1,8 +1,8 @@
-# True Knowledge Graph with Memgraph on Climate Change Litigation Database
+# Knowledge Graph with Memgraph on Climate Cases Database
 
 [![Personal Project](https://img.shields.io/badge/Project-Personal-green)](https://meg-patakota.github.io)
 [![by Meg Patakota](https://img.shields.io/badge/by-Meg%20Patakota-blue)](https://meg-patakota.github.io)
-[![Project Status](https://img.shields.io/badge/Status-In%20Development-orange)](https://github.com/yourusername/knowledge-graph-climate-litigation-cases)
+[![Project Status](https://img.shields.io/badge/Status-In%20Development-orange)](https://github.com/yourusername/knowledge-graph-climate-cases)
 
 > ⚠️ **Disclaimer:** This project is currently under active development. Features, code, and documentation are subject to change as it evolves.
 
@@ -20,8 +20,8 @@
 Clone the repository and install dependencies using **Poetry**:
 
 ```bash
-git clone https://github.com/yourusername/knowledge-graph-climate-litigation-cases.git
-cd knowledge-graph-climate-litigation-cases
+git clone https://github.com/yourusername/knowledge-graph-climate-cases.git
+cd knowledge-graph-climate-cases
 poetry install
 ```
 
@@ -49,21 +49,21 @@ RETURN c, e, r;
 [Sabin Center for Climate Change Law](https://climatecasechart.com)
 
 ### About the Graph
-- **Purpose of the Graph**: The graph visualizes relationships within a dataset of climate litigation cases, focusing on extracting and connecting key components, such as document chunks (CHUNK) and related entities (ENTITY), to explore the legal landscape of climate change litigation.
+- **Purpose of the Graph**: The graph visualizes relationships within a dataset of climate cases, focusing on extracting and connecting key components, such as document chunks (CHUNK) and related entities (ENTITY), to explore the legal landscape of climate change.
 
 - **Node Representation**: 
-  - **CHUNK Nodes**: Represent specific text chunks or sections from legal documents related to climate change litigation.
+  - **CHUNK Nodes**: Represent specific text chunks or sections from legal documents related to climate change.
   - **ENTITY Nodes**: Represent named entities such as organizations, locations, people, and dates extracted from these chunks.
 
 - **Relationship Creation**:
   - **HAS_ENTITY Relationship**: Connects CHUNK nodes to their corresponding ENTITY nodes, indicating where in the document specific entities are mentioned, which helps in analyzing the context of these mentions.
 
-- **Graph Queries**: Users can run Cypher queries to view the connections between document chunks and entities, aiding in the discovery of how key entities (e.g., companies, governments, locations) are involved across multiple climate litigation cases.
+- **Graph Queries**: Users can run Cypher queries to view the connections between document chunks and entities, aiding in the discovery of how key entities (e.g., companies, governments, locations) are involved across multiple climate cases.
 
 - **Value Proposition**:
-  - **Insight Discovery**: By structuring the litigation data as a graph, it enables complex queries and visual exploration, allowing legal researchers to quickly identify patterns, such as which entities are frequently mentioned across cases.
-  - **Enhanced Understanding**: This graph approach provides a more interactive and insightful way to study climate litigation cases than traditional text-based analysis, as it highlights the relationships between different parts of the data.
-  - **Scalable Analysis**: The architecture allows for easy scaling, meaning that additional litigation cases or entity types can be incorporated into the graph over time to expand its utility.
+  - **Insight Discovery**: By structuring the data as a graph, it enables complex queries and visual exploration, allowing legal researchers to quickly identify patterns, such as which entities are frequently mentioned across cases.
+  - **Enhanced Understanding**: This graph approach provides a more interactive and insightful way to study climate cases than traditional text-based analysis, as it highlights the relationships between different parts of the data.
+  - **Scalable Analysis**: The architecture allows for easy scaling, meaning that additional cases or entity types can be incorporated into the graph over time to expand its utility.
 
 
 ## Next Steps
