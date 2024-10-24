@@ -11,6 +11,8 @@
 - [Graph Architecture](#graph-architecture)
     - [Graph setup](#graph-setup)
 - [About the Data](#about-data)
+    - [About the Graph](#about-the-graph)
+- [Next Steps](#next-steps)
 - [Contributing](#contributing)
 
 ## Installation
@@ -45,6 +47,32 @@ RETURN c, e, r;
 
 ## About the Data 
 [Sabin Center for Climate Change Law](https://climatecasechart.com)
+
+### About the Graph
+- **Purpose of the Graph**: The graph visualizes relationships within a dataset of climate litigation cases, focusing on extracting and connecting key components, such as document chunks (CHUNK) and related entities (ENTITY), to explore the legal landscape of climate change litigation.
+
+- **Node Representation**: 
+  - **CHUNK Nodes**: Represent specific text chunks or sections from legal documents related to climate change litigation.
+  - **ENTITY Nodes**: Represent named entities such as organizations, locations, people, and dates extracted from these chunks.
+
+- **Relationship Creation**:
+  - **HAS_ENTITY Relationship**: Connects CHUNK nodes to their corresponding ENTITY nodes, indicating where in the document specific entities are mentioned, which helps in analyzing the context of these mentions.
+
+- **Graph Queries**: Users can run Cypher queries to view the connections between document chunks and entities, aiding in the discovery of how key entities (e.g., companies, governments, locations) are involved across multiple climate litigation cases.
+
+- **Value Proposition**:
+  - **Insight Discovery**: By structuring the litigation data as a graph, it enables complex queries and visual exploration, allowing legal researchers to quickly identify patterns, such as which entities are frequently mentioned across cases.
+  - **Enhanced Understanding**: This graph approach provides a more interactive and insightful way to study climate litigation cases than traditional text-based analysis, as it highlights the relationships between different parts of the data.
+  - **Scalable Analysis**: The architecture allows for easy scaling, meaning that additional litigation cases or entity types can be incorporated into the graph over time to expand its utility.
+
+
+## Next Steps
+- **Deduplication**: Implement a strategy to detect and merge duplicate nodes to avoid redundancy and improve graph accuracy.
+- **Performance Optimization**: Explore batching or parallel processing for faster node and relationship creation, and optimize query performance with indexing.
+- **Entity Expansion**: Enhance entity extraction by integrating advanced NLP techniques and external knowledge bases to enrich ENTITY nodes.
+- **Schema Refinement**: Refine the graph schema with more detailed node categories and relationship types for deeper analysis.
+- **Data Validation**: Implement automated checks for data consistency and accuracy before graph insertion.
+
 
 ## Contributing
 
